@@ -1,6 +1,5 @@
 import React from "react";
-import { BroadcastChannel } from "broadcast-channel";
-const channel = new BroadcastChannel("foobar");
+import { channel } from "./Channel";
 channel.onmessage = (msg) => console.log(msg);
 const send = () => channel.postMessage("clicked");
 function App() {
